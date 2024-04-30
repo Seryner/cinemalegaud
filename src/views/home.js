@@ -66,12 +66,10 @@ function Home() {
         {movies.length > 0 && (
           <div className="movie-container">
             {movies.map(movie => (
-              <Link to={`/details/${movie.id}`} key={movie.id} className="movie-link">
               <div key={movie.id} className="movie">
                 <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
                 <p>{movie.title}</p>
               </div>
-              </Link>
             ))}
           </div>
         )}
